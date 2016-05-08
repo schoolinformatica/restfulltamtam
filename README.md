@@ -2,7 +2,7 @@
 Restfull api for TamTam splash battle game
 
 This restfull API is written in PHP with the Laravel framework. It acts as the interface between the Game and the database, and the
-Android Application and the database. So in fact, instead of accessing the database directly and writing queries, http requests are
+Android Application and the database. Therefore, instead of accessing the database directly and writing queries, http requests are
 made to the API which is both a safer and more of a clean implementation.
 
 ## Usage
