@@ -30,8 +30,8 @@ __GET http://base_url/users/1__
 ## Response
 All the http requests will give a response. All the responses are containing the following:
 * JSON body
-  *Json Object (Single response object)
-  *Json Array [Json Objects] (Multiple response objects)
+  * Json Object (Single response object)
+  * Json Array [Json Objects] (Multiple response objects)
 
 * Response Code
   * __200__ OK (request succeeded)
