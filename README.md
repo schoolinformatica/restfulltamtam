@@ -83,7 +83,7 @@ Path | Params (* Optional) | Explanation
 ------------ | ------------- | ------------
 GET __/invitedPlayers__ | None | Retreive all InvitedPlayers
 GET __/invitedPlayers/{id}__ | None | Retreive single InvitedPlayer by Id
-GET __/invitedPlayers/uid/{userid}__ | Retreive single InvitedPlayer by userId
+GET __/invitedPlayers/uid/{userid}__ | None | Retreive single InvitedPlayer by userId
 POST __/invitedPlayers__ | inviteId, userId | Create new InvitedPlayer
 PUT  __/invitedPlayers/{inviteid}/{userid}__ | accepted, rejected | Update InvitedPlayer by inviteId and userId
 DELETE __/invitedPlayers/{inviteid}/{userid}__ | None | Delete InvitedPlayer by inviteId and userId
