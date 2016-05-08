@@ -69,5 +69,24 @@ POST __/scores__ | userId, score* | Create new score
 PUT __/scores/{userid}__ | score | Updates score of user by userId
 DELETE __/scores/{userid}__ | None | Deletes Score by userId
 
+### Invites
+Path | Params (* Optional) | Explanation
+------------ | ------------- | ------------
+GET __/invites__ | None | Retreive all Invites
+GET __/invites/{id}__ | None | Retreive single Invite by Id
+POST __/invites__ | time, location, usersInvited | Creates a new Invite
+PUT __/invites/{id}__ | time\*, location\*, usersAccepted\*, usersInvited\* | Updates Invite by Id
+DELETE __/invites/{id}__ | None | Delete user by Id
+
+### InvitedPlayers
+Path | Params (* Optional) | Explanation
+------------ | ------------- | ------------
+GET __/invitedPlayers__ | None | Retreive all InvitedPlayers
+GET __/invitedPlayers/{id}__ | None | Retreive single InvitedPlayer by Id
+GET __/invitedPlayers/uid/{userid}__ | None | Retreive single InvitedPlayer by userId
+POST __/invitedPlayers__ | inviteId, userId | Create new InvitedPlayer
+PUT  __/invitedPlayers/{inviteid}/{userid}__ | accepted, rejected | Update InvitedPlayer by inviteId and userId
+DELETE __/invitedPlayers/{inviteid}/{userid}__ | None | Delete InvitedPlayer by inviteId and userId
+
 
 
