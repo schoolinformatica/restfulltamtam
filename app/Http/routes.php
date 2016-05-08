@@ -21,11 +21,11 @@ Route::post('/users', 'UserController@createUser');
 Route::put('/users/{id}', 'UserController@updateUser');
 Route::delete('/users/{id}', 'UserController@deleteUser');
 
-Route::get('/scores', 'UserController@getAllScores');
-Route::get('/scores/{id}', 'UserController@getScore');
-Route::post('/scores', 'UserController@createScore');
-Route::put('/scores/{id}', 'UserController@updateScore');
-Route::delete('/scores/{id}', 'UserController@deleteScore');
+Route::get('/scores', 'ScoreController@getAllScores');
+Route::get('/scores/{id}', 'ScoreController@getScore');
+Route::post('/scores', 'ScoreController@createScore');
+Route::put('/scores/{id}', 'ScoreController@updateScore');
+Route::delete('/scores/{id}', 'ScoreController@deleteScore');
 
 Route::get('/invites', 'InviteController@getAllInvites');
 Route::get('/invites/{id}', 'InviteController@getInvite');
