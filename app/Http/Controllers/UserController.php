@@ -8,6 +8,12 @@ use Symfony\Component\HttpFoundation\Response;
 
 class UserController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('jwt.auth', ['except' => ['index']]);  // or use 'only' in place of except
+    }
+
     public function getUser($id)
     {
         return User::find($id);

@@ -11,12 +11,17 @@ use Symfony\Component\HttpFoundation\Response;
 
 class InvitedPlayerController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('jwt.auth', ['except' => ['index']]);  // or use 'only' in place of except
+    }
+    
     public function getInvitedPlayer($id) {
         return InvitedPlayer::find($id);
     }
 
-    public function getInvitedPlayerByUserId($id) {
-        return InvitedPlayer::where('userId', $id)->get();
+    public function getInvitedPlayerByUserId($userid) {
+        return InvitedPlayer::where('userId', $userid)->get();
     }
 
     public function getAllInvitedPlayers() {
@@ -35,8 +40,8 @@ class InvitedPlayerController extends Controller
             return new Response("{'succeed':'FALSE'}", 500);
     }
 
-    public function updateInvitedPlayer($id, $userId) {
-        $invitedplayer = InvitedPlayer::where('id', $id)->where('userId', $userId)->get();
+    public function updateInvitedPlayer($inviteid, $userId) {
+        $invitedplayer = InvitedPlayer::where('inviteId', $inviteid)->where('userId', $userId)->first();
 
         if(Input::has('accepted'))
             $invitedplayer->accepted = Input::get('accepted');
